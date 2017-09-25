@@ -1,0 +1,42 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="paper-menu-bar">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `paper-menu-bar`
+     * Mac-like menu bar implemented for the web in Polymer
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class PaperMenuBar extends Polymer.Element {
+      static get is() { return 'paper-menu-bar'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'paper-menu-bar'
+          },
+          menu: {
+            type: Object,
+            value: () => { return {}; }
+          }          
+        };
+      }
+
+      
+    }
+
+    window.customElements.define(PaperMenuBar.is, PaperMenuBar);
+  </script>
+</dom-module>
